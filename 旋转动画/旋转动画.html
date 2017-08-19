@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旋转动画</title>
+	  <style type="text/css">
+	  .wraper{ 
+	  	     width:400px;
+	  		 height:400px;        
+             top:50%;
+             left:50%;
+             margin-left:-200px;
+             margin-top:-200px;	    
+             -webkit-transform-style:preserve-3d;            
+             -webkit-transform:rotateX(-180deg);
+             position:absolute;
+             animation:move 6s linear infinite;
+             transform-origin:center center;
+	    }     	  
+	   p{
+             width:200px;
+             height:300px;            
+             margin:0 auto;
+             left:0;
+             top:0;
+             position:absolute;
+	  	}
+	  p:nth-child(1){
+	  	     background-image: url(images/03.jpg);
+	  	     transform:translateZ(400px);
+	  }
+	  p:nth-child(2){
+	  	     background-image: url(images/04.jpg);
+	  	     transform:rotateY(30deg) translateZ(400px);
+	  }
+	  p:nth-child(3){
+	  	     background-image: url(images/05.jpg);
+	  	     transform:rotateY(60deg) translateZ(400px);
+	  }
+	  p:nth-child(4){
+	  	     background-image: url(images/06.jpg);
+	  	     transform:rotateY(90deg) translateZ(400px);
+	  }
+	  p:nth-child(5){
+	  	     background-image: url(images/07.jpg);
+	  	     transform:rotateY(-30deg) translateZ(400px);
+	  }
+	  p:nth-child(6){
+	  	     background-image: url(images/08.jpg);
+	         transform: rotateY(-60deg) translateZ(400px);
+	  }
+	  p:nth-child(7){
+	  	     background-image: url(images/09.jpg);
+	  	     transform: rotateY(-90deg) translateZ(400px);
+	  }
+	  p:nth-child(8){
+	  	     background-image: url(images/10.jpg);
+	  	     transform: rotateY(120deg) translateZ(400px);
+      }
+      p:nth-child(9){
+      	     background-image: url(images/11.jpg);
+      	     transform: rotateY(150deg) translateZ(400px);
+      }
+      p:nth-child(10){
+      	     background-image: url(images/12.jpg);
+      	     transform: rotateY(180deg) translateZ(400px);
+      }
+      p:nth-child(11){
+             background-image:url(images/01.jpg);
+             transform:rotateY(-120deg) translateZ(400px);
+      }
+      p:nth-child(12){
+      	     background-image:url(images/02.jpg);
+      	      transform:rotateY(-150deg) translateZ(400px);}
+
+      @-webkit-keyframes move{
+		0%{-webkit-transform:rotateX(-20deg) rotateY(0deg);}
+		100%{-webkit-transform:rotateX(-30deg) rotateY(360deg);}
+	  </style>
+</head>
+<body>
+	<div class="wraper">
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	</div>
+</body>
+</html>

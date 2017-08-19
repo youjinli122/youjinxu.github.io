@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.wraper{
+			width:500px;
+			height:500px;
+			background:url(images/bg.jpg)  no-repeat;
+			-webkit-mask-image:url(images/apple.png),url(images/apple.png),url(images/apple.png),url(images/apple.png);
+			-webkit-mask-repeat:no-repeat;
+			-webkit-mask-size:10%;
+			-webkit-animation:one 1s linear,two 5s linear 1s;
+			position: absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+			transform-style: preserve-3d;
+			perspective:1000px;
+		       }
+		@-webkit-keyframes one{
+			50%{-webkit-mask-size:20%;
+			     }
+			   }
+	    @-webkit-keyframes two{
+	    	0%{-webkit-mask-size:20%,10%,10%,10%;
+	    	   -webkit-mask-position:left top,center,center,center;}
+	        10%{-webkit-mask-size:20%,10%,10%,10%;
+	           -webkit-mask-position:left top,right top,center,center;}
+	        20%{-webkit-mask-size:20%,20%,10%,10%;
+               -webkit-mask-position:right top,left top,right bottom,left bottom;}
+            40%{-webkit-mask-size:20%,20%,20%,20%;
+               -webkit-mask-position:left bottom,left top;right top,right bottom;}
+            60%{-webkit-mask-size:20%,20%,20%,20%;
+               -webkit-mask-position:left top,right top,right bottom,left bottom;}
+            80%{-webkit-mask-size:30%,30%,30%,30%;
+               -webkit-mask-position:center,center,center,center;}
+            100%{-webkit-mask-size:40%,40%,40%,40%;
+               -webkit-mask-position:top center,right center,bottom center,left center;}
+	</style>
+</head>
+<body>
+	<div class="wraper">
+		
+	</div>
+</body>
+</html>

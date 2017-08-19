@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Single element pure CSS 3D starfield</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <!-- 1.box-shadow生成粒子，赋予随机位置、随机颜色，利用sass的for循环和random()实现。
+
+2.animation实现动画。
+
+3.transform 3d实现深度动画，主要使用translateZ。
+   -->
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  perspective: 340px;
+  background: #000 url(http://img.my.csdn.net/uploads/201501/02/1420174857_3649.png) center center no-repeat;
+  background-size: 28% 30%;
+}
+
+.stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  box-shadow: -213px -418px #c400ff, 389px -251px #ff00f7, -93px 76px #ff00cc, -3px 232px #00ff11, 533px -335px #59ff00, 648px 423px #00ff51, 357px 279px #00ff44, -522px -411px #00ff11, 16px -421px #ff007b, 494px -130px #ff001e, -179px 340px #ea00ff, -221px 164px #9d00ff, -441px 52px #1a00ff, -187px 63px #a200ff, -80px -33px #00ff80, 64px -213px #00ff80, -240px -70px #ffb300, 609px -264px #ff002f, -502px 69px #00ff22, 658px 27px #ff00f7, 738px 308px #51ff00, 315px -48px #8000ff, -124px -354px #f700ff, -297px 154px #ff5500, -610px 42px #0015ff, -27px -326px #00ffd9, 453px -276px deepskyblue, 396px -147px #ff0026, 262px 77px #00ff91, -503px -82px #00ff84, 275px -461px #e6ff00, -458px -204px #ff00d0, 40px -291px red, -200px -317px #2200ff, 478px 30px #00eaff, 76px 451px #1a00ff, -662px 474px #001aff, 725px 176px #ff007b, 349px 365px #00ff88, -252px -160px #9900ff, -137px 54px #fff200, -35px -104px #00a6ff, -556px 448px #0066ff, -111px 183px #7b00ff, -297px -151px #ff0088, 601px -149px #0084ff, -390px 165px #00ff0d, -571px 409px #00ffcc, 395px -86px #9d00ff, 218px 396px #7bff00, 236px 169px #ff4d00, 480px -220px #ffaa00, 285px -309px #ff6200, 331px 145px #1a00ff, -312px 212px #00ff95, 592px -377px #00ff62, 239px 62px #d900ff, 565px -367px #aeff00, 744px 348px #0037ff, -571px 177px #b300ff, 275px -53px #88ff00, -646px 11px #ff9500, 85px -376px #59ff00, -139px 114px #ff00dd, 336px -364px #00f2ff, -674px -341px #ff004d, 568px 255px #00ff95, -446px 301px #00b3ff, 5px -268px #ff005e, 560px 335px #ff00f7, 270px -84px #00ffee, -113px 337px #6200ff, 445px -63px #00ff80, -507px 64px #ff0095, 689px 284px #00fffb, -493px 345px #ff0059, -653px -41px #ff5e00, -647px -241px #09ff00, -745px -462px #bf00ff, -479px -363px #ff0011, -36px -182px #ff4400, -191px 245px #ff7300, -620px -73px #00fffb, -689px 310px #ff0009, -532px 327px #a600ff, -280px -280px #ff4400, 419px 163px #00ff73, -25px 141px #00ff33, 182px 443px #ff6f00, -577px 0px #2200ff, -641px 140px #3700ff, -406px 33px #00ff66, -430px -149px #3cff00, -194px 406px #9500ff, -116px 224px #ff0080, -404px 190px #e100ff, -496px -213px #00ff84, 328px 324px #ff0051, 116px 473px #00ffc4, 517px 58px yellow, -311px -169px #1eff00;
+  animation: fly 1s linear infinite;
+  transform-style: preserve-3d;
+}
+.stars:before, .stars:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  box-shadow: inherit;
+}
+.stars:before {
+  transform: translateZ(-300px);
+  opacity: .3;
+}
+.stars:after {
+  transform: translateZ(-600px);
+  opacity: .1;
+}
+
+@keyframes fly {
+  from {
+    transform: translateZ(0px);
+    opacity: .1;
+  }
+  to {
+    transform: translateZ(300px);
+    opacity: 0.8;
+  }
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="stars"></div>
+  
+  
+</body>
+</html>
